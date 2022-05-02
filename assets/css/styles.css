@@ -1,9 +1,19 @@
+@font-face {
+  font-family: 'yekan';
+  src: url("assets/fonts/Yekan.ttf") format("truetype"), url("assets/fonts/Yekan.woff") format("woff"), url("assets/fonts/Yekan.woff2") format("woff2");
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'yekan';
+  color: #fff;
+}
+
+body {
+  background-image: url(/assets/images/bg.jpg);
 }
 
 .header {
@@ -25,7 +35,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 10px;
+  padding-top: 20px;
 }
 
 .nav ul {
@@ -39,9 +49,33 @@
           flex-direction: row-reverse;
 }
 
+.nav .icon {
+  display: none;
+  font-size: 20px;
+}
+
 .nav a {
   text-decoration: none;
-  margin-right: 15px;
+  margin-right: 25px;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.nav a:hover {
+  color: aqua;
+}
+
+@media screen and (max-width: 600px) {
+  .nav li {
+    display: none;
+  }
+  .nav .icon {
+    display: block;
+    cursor: pointer;
+  }
+  .content h1, p, span {
+    font-size: 1rem;
+  }
 }
 
 .content {
@@ -55,12 +89,22 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 3rem;
+  gap: 2.5rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 1.5rem;
+}
+
+.content span {
+  cursor: pointer;
+}
+
+.content span:hover {
+  margin: 2px;
+  border-bottom: 2px solid aqua;
 }
 /*# sourceMappingURL=styles.css.map */
